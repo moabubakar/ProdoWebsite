@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#myInput").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                $("#items tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+                });
+            });
+    </script>
+        <style>
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px; 
+            }
+        </style>
+    </head>
+    <body>
+        <input id="myInput" type="text" placeholder="Search..">
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Collection</th>
+                </tr>
+            </thead>
+            <tbody id="items">
+                <tr><td>name</td></tr>
+                <tr><td>category</td></tr>
+                <tr><td>price</td></tr>
+                <tr><td>weight</td></tr>
+            </tbody>
+        </table>
+    </body>
+</html>

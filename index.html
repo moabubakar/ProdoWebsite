@@ -84,8 +84,8 @@
             style="
             position: absolute;
             margin-left: -4.5%;
-            margin-top: -35px;""
-            src="./images/analytics.svg" alt="">
+            margin-top: -35px;"
+            src="./images/analytics.svg">
           <div class="analytics">
             <h1>Analytics</h1>
             <p>Analyze your performance and create gorgeous
@@ -97,7 +97,7 @@
             style="
             position: absolute;
             margin-left: -4.5%;
-            margin-top: -35px;""
+            margin-top: -35px;"
             src="./images/engagement.svg" alt="">
           <div class="engagement">
             <h1>Engagement</h1>
@@ -190,6 +190,26 @@
                       <input class="form-control" id="email" type="email" placeholder="Email" data-sb-validations="required,email" />
                       <div class="invalid-feedback" data-sb-feedback="email:required">Email is required.</div>
                       <div class="invalid-feedback" data-sb-feedback="email:email">Email Email is not valid.</div>
+                              
+                                <script>
+                                      var email = document.getElementById("email");
+                                    
+                                      var JSONobject;
+                                    
+                                      if (email.tagName.toLowerCase() == "email")
+                                            {
+                                                  JSONobject = {"users" : [{"email" : email}]};
+                                                
+                                                  alert("User successfully signed in");
+                                            }
+                                    
+                                      else
+                                            {
+                                                  alert("Email inputted is not in the right format");
+                                            }
+                                    
+                                    
+                                </script>
                   </div>
                   <div class="mb-3">
                       <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
